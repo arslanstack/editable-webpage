@@ -1,0 +1,33 @@
+#workng{
+    background-image: url("header.jpeg");
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+#rounded-button{
+    cursor: pointer;
+    display: none;  
+    border: none;
+    background-color: transparent;
+}
+#workng:hover #rounded-button{
+    display: block;
+}
+#aboutUs{
+    display:table;
+    width:100%;
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url(aboutus1.png);
+    background-position:center bottom;
+    background-size: cover;
+    height:450px;
+    color: white;
+}
+#about-button{
+    cursor: pointer;
+    display: none;  
+    border: none;
+    background-color: transparent;
+}
+#aboutUs:hover #about-button{
+    display: block;
+}

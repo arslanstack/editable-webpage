@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="app.css">
+    <!-- AJax to fetch filename -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- Custom Javascript -->
+    <script src="script.js"></script>
+
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div class="container-fluid bg-dark">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="mainNavbar ">
+                <a class="navbar-brand mb-0 h1" href="#" contenteditable="true"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="30" height="30" fill="currentColor" class="bi bi-alexa" viewBox="0 0 16 16">
+                        <path
+                            d="M7.996 0A7.998 7.998 0 0 0 0 8a8 8 0 0 0 6.93 7.93v-1.613a1.06 1.06 0 0 0-.717-1.008A5.602 5.602 0 0 1 2.4 7.865 5.579 5.579 0 0 1 8.054 2.4a5.599 5.599 0 0 1 5.535 5.81l-.002.046a6.116 6.116 0 0 1-.012.192l-.005.061a4.85 4.85 0 0 1-.033.284l-.01.068c-.685 4.516-6.564 7.054-6.596 7.068A7.998 7.998 0 0 0 15.992 8 7.998 7.998 0 0 0 7.996.001Z" />
+                    </svg> Arslan/Stack</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Content"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="Content">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#" ondblclick="this.contentEditable=true;"
+                                onblur="this.contentEditable=false;" contenteditable="false">Home</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#" ondblclick="this.contentEditable=true;"
+                                onblur="this.contentEditable=false;" contenteditable="false">Latest</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#" ondblclick="this.contentEditable=true;"
+                                onblur="this.contentEditable=false;" contenteditable="false">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" ondblclick="this.contentEditable=true;"
+                                onblur="this.contentEditable=false;" contenteditable="false">Courses</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#" ondblclick="this.contentEditable=true;"
+                                onblur="this.contentEditable=false;" contenteditable="false">Blog </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" ondblclick="this.contentEditable=true;"
+                                onblur="this.contentEditable=false;" contenteditable="false">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="jumbotron" id="workng">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-8">
+                <h1 class="display-4" contenteditable="true">Hello, world!</h1>
+                <p class="lead" contenteditable="true">This is a simple hero unit, a simple jumbotron-style component
+                    for calling extra attention to featured content or information.</p>
+                <hr class="my-4">
+                <p contenteditable="true">It uses utility classes for typography and spacing to space content out within
+                    the larger container.</p>
+                <br>
+                <a class="btn btn-primary btn-lg" href="" role="button" contenteditable="">Learn more</a>
+            </div>
+            <div class="col-md-3">
+                <input type="file" id="files" style="visibility: hidden;">
+                <label for="files" onclick="banner()" class="btn" id="rounded-button"><svg width="30" height="30"
+                        fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m4 16 4.586-4.586a2 2 0 0 1 2.828 0L16 16"></path>
+                        <path d="m14 14 1.586-1.586a2 2 0 0 1 2.828 0L20 14"></path>
+                        <path d="M14 8h.01"></path>
+                        <path d="M6 20h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2Z"></path>
+                    </svg></label>
+            </div>
+        </div>
+    </div>
+
+    <section class="container" id="carder">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-12 my-2" id="latestsection">
+                <div class="card" style="border: none; background-color: #caf0f8;">
+                    <input type="file" name="profile_photo" id="fileInput" onchange="loadFile(event)"
+                        style="visibility: hidden;">
+                    <!-- <input type="file" id="card1" > -->
+                    <label for="fileInput" onclick="loadFile(event)" class="btn" id="card-1"><img class="card-img-top"
+                            id="card1img" src="card1.png" alt="Card image cap"></label>
+                    <div class="card-body">
+                        <h5 class="card-title" contenteditable="true">Card title</h5>
+                        <p class="card-text" contenteditable="true">Some quick example text to build on the card title
+                            and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary" contenteditable="true">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 my-2">
+                <div class="card" style="border: none; background-color: #caf0f8;">
+                    <input type="file" name="profile_photo2" id="fileInput2" onchange="loadFile2(event)"
+                        style="visibility: hidden;">
+                    <!-- <input type="file" id="card1" > -->
+                    <label for="fileInput2" onclick="loadFile2(event)" class="btn" id="card-2"><img class="card-img-top"
+                            id="card2img" src="card2.png" alt="Card image cap"></label>
+                    <div class="card-body">
+                        <h5 class="card-title" contenteditable="true">Card title</h5>
+                        <p class="card-text" contenteditable="true">Some quick example text to build on the card title
+                            and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary" contenteditable="true">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 my-2" id="differentCard">
+                <div class="card" style="border: none; background-color: #caf0f8;">
+                    <input type="file" name="profile_photo3" id="fileInput3" onchange="loadFile3(event)"
+                        style="visibility: hidden;">
+                    <!-- <input type="file" id="card1" > -->
+                    <label for="fileInput3" onclick="loadFile3(event)" class="btn" id="card-3"><img class="card-img-top"
+                            id="card3img" src="card3.png" alt="Card image cap"></label>
+                    <div class="card-body">
+                        <h5 class="card-title" contenteditable="true">Card title</h5>
+                        <p class="card-text" contenteditable="true">Some quick example text to build on the card title
+                            and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary" contenteditable="true">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <div class="jumbotron" id="aboutUs">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" id="aboutsection">
+                    <h1 class="display-4" contenteditable="true">About Us</h1>
+                    <br>
+                    <p class="lead" contenteditable="true">This is a simple hero unit, a simple jumbotron-style
+                        component for calling extra
+                        attention to featured content or information. </p>
+                    <p class="lead" contenteditable="true">This is a simple hero unit, a simple jumbotron-style
+                        component for calling extra
+                        attention to featured content or information. </p>
+                    <p class="lead" contenteditable="true">This is a simple hero unit, a simple jumbotron-style
+                        component for calling extra
+                        attention to featured content or information.</p>
+                    <br>
+                    <a class="btn btn-primary btn-lg" href="" role="button" contenteditable="">Learn more</a>
+                    <input type="file" id="files2" style="visibility: hidden;">
+                    <label for="files2" onclick="banner2()" class="btn" id="about-button"><svg width="30" height="30"
+                            fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m4 16 4.586-4.586a2 2 0 0 1 2.828 0L16 16"></path>
+                            <path d="m14 14 1.586-1.586a2 2 0 0 1 2.828 0L20 14"></path>
+                            <path d="M14 8h.01"></path>
+                            <path d="M6 20h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2Z"></path>
+                        </svg></label>
+                </div>
+                <div class="col-md-6">
+                    <input type="file" name="profile_photo4" id="fileInput4" onchange="loadFile4(event)"
+                        style="visibility: hidden;">
+                    <!-- <input type="file" id="card1" > -->
+                    <label for="fileInput4" onclick="loadFile4(event)" class="btn" id="card-4"><img id="topimg" class="img-fluid"
+                            src="1.jpg" alt=""></label>
+                    <!-- <img class="img-fluid" src="1.jpg" alt=""> -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+
+
+
+</body>
+
+</html>
